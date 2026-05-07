@@ -1,0 +1,32 @@
+{
+  "universes": {
+    "BigTech6": ["NVDA", "MSFT", "AAPL", "GOOGL", "AMZN", "META"],
+    "USConsumer20": [
+      "WMT", "COST", "PG", "KO", "PEP", "MCD", "NKE", "SBUX", "TGT", "HD",
+      "LOW", "TJX", "ROST", "DG", "DLTR", "YUM", "CMG", "DPZ", "ORLY", "AZO"
+    ],
+    "Defensive15": [
+      "JNJ", "PG", "KO", "PEP", "CL", "GIS", "K", "SJM", "MKC", "HRL",
+      "DUK", "SO", "D", "AEP", "NEE"
+    ]
+  },
+  "backtest": {
+    "test_start": "2024-01-01",
+    "test_end": "2025-01-31",
+    "lookback_days": 180,
+    "capital": 100000,
+    "rebalance_freq": "W-FRI"
+  },
+  "router": {
+    "policy": "risk",
+    "top_k": 3,
+    "min_conf": 0.05,
+    "lambda_risk": 0.5,
+    "gamma_cost": 0.2,
+    "tau": 0.7
+  },
+  "aggregator": {
+    "policy": "bayes"
+  },
+  "operating_points": ["optimizer", "consensus", "alpha"]
+}

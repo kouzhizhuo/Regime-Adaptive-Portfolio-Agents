@@ -6,7 +6,7 @@ import numpy as np
 import os
 
 # Load the actual experimental results
-results_dir = "/Users/alankou/Desktop/InvestmentNips26/profintest/experiments/nips_revision"
+results_dir = os.environ.get("RESULTS_DIR", os.path.join(os.path.dirname(__file__), "..", "results", "nips_revision"))
 
 # Load all_results.json for baseline data
 with open(os.path.join(results_dir, "all_results.json")) as f:

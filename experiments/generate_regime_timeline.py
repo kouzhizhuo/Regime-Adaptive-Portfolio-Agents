@@ -1,4 +1,7 @@
-import matplotlib.pyplot as plt
+import os
+
+output_path = os.environ.get("OUTPUT_PATH", os.path.join(os.path.dirname(__file__), "..", "results", "regime_timeline.pdf"))
+os.makedirs(os.path.dirname(output_path), exist_ok=True)
 import matplotlib.patches as mpatches
 import numpy as np
 import pandas as pd
@@ -60,7 +63,6 @@ fig.legend(handles=patches, loc='upper center', ncol=4, fontsize=9, frameon=Fals
 
 plt.suptitle('Adaptive Meta-Policy: Mode Selection Timeline', fontsize=11, y=1.0)
 plt.tight_layout(rect=[0, 0, 1, 0.95])
-plt.savefig('/Users/alankou/Desktop/InvestmentNips26/UtilityNips0425_Overleaf 2/regime_timeline.pdf', 
-            bbox_inches='tight', dpi=150)
+plt.savefig(output_path, bbox_inches='tight', dpi=150)
 plt.close()
 print("regime_timeline.pdf generated successfully")

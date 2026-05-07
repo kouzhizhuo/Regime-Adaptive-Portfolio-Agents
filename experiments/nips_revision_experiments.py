@@ -14,9 +14,9 @@ from scipy.cluster.hierarchy import linkage, leaves_list
 from scipy.spatial.distance import squareform
 
 # ─── Configuration ─────────────────────────────────────────────
-SP500_DATA = "/Users/alankou/Downloads/sp500_data"
-POLYGON_HF = "/Volumes/Alan/Trump Trade/Polygon Data/sp500_15min.csv"
-RESULTS_DIR = Path("/Users/alankou/Desktop/InvestmentNips26/profintest/experiments/nips_revision")
+SP500_DATA = os.environ.get("SP500_DATA", os.path.join(os.path.dirname(__file__), "..", "data", "sp500"))
+POLYGON_HF = os.environ.get("POLYGON_HF", os.path.join(os.path.dirname(__file__), "..", "data", "sp500_15min.csv"))
+RESULTS_DIR = Path(os.environ.get("RESULTS_DIR", os.path.join(os.path.dirname(__file__), "..", "results", "nips_revision")))
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 TEST_START = "2024-01-01"
@@ -358,7 +358,7 @@ def min_variance_backtest(prices: pd.DataFrame, lookback: int = 126, rebal_freq:
 
 def run_profinview(symbols: List[str], mode: str = "optimizer", **kwargs) -> Dict:
     """Run profinview backtest in a specific mode."""
-    sys.path.insert(0, "/Users/alankou/Desktop/InvestmentNips26/profintest")
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
     from profinview.backtest.engine import BacktestRunner, BacktestConfig
 
     cfg = BacktestConfig(
