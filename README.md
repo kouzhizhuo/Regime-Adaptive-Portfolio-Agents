@@ -1,12 +1,7 @@
 # When to Route? Regime-Adaptive Meta-Policies for Hierarchical Portfolio Agents
 
-Official code for *"When to Route? Regime-Adaptive Meta-Policies for Hierarchical Portfolio Agents"*.
 
-**Zhizhuo Kou, Jian Yang, Junyu Luo, Yuyao Zhang, Sirui Han, Yike Guo** — HKUST & Peking University
-
-## Overview
-
-A three-tier hierarchical investment agent with three operating points — **optimizer-only**, **consensus routing**, and **alpha-augmented** — plus a rolling adaptive meta-policy that selects among them based on market regime. We show the optimal mode is regime-dependent and predictably conditioned on measurable market characteristics (cross-sectional dispersion, correlation structure, momentum persistence).
+A three-tier hierarchical investment agent with three operating points — **optimizer-only**, **consensus routing**, and **alpha-augmented** — plus a rolling adaptive meta-policy that selects among them based on market regime.
 
 ```
 Tier 1 (Information)  →  Tier 2 (Routing & Aggregation)  →  Tier 3 (Allocation)
