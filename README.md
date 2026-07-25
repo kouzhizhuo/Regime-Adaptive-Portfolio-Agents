@@ -52,12 +52,4 @@ python experiments/nips_revision_experiments.py
 
 Data (S&P 500 daily OHLCV JSON files) is not included — place your files in `data/sp500/` or set `--data-dir`.
 
-## Citation
 
-```bibtex
-@article{kou2025whentoroute,
-  title={When to Route? Regime-Adaptive Meta-Policies for Hierarchical Portfolio Agents},
-  author={Kou, Zhizhuo and Yang, Jian and Luo, Junyu and Zhang, Yuyao and Han, Sirui and Guo, Yike},
-  year={2025}
-}
-```
