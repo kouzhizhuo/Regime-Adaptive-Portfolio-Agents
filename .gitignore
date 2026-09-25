@@ -25,3 +25,9 @@ Thumbs.db
 # Env
 .env
 *.log
+
+# Router outputs
+router/data/
+router/results/
+router/final/
+router/analysis/

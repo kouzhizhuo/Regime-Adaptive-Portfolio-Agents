@@ -21,6 +21,7 @@ profinview/          Core framework
   data/              Data loaders
   cli.py             CLI entry point
 experiments/         Experiment scripts (Tables 1–6 in paper)
+router/              Router, operating points, allocator, meta-policy and evaluation pipeline (see router/README.md)
 configs/             Example configurations
 ```
 
